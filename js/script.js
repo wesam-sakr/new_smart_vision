@@ -18,7 +18,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // sliders
-  const swiper = new Swiper('.pricing .swiper', {
+  const pricing = new Swiper('.pricing .swiper', {
+    rtl: dirAr, 
+    initialSlide: 1,
+    slidesPerView: 3, 
+    spaceBetween: 32,
+    centeredSlides: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2, 
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 1.5,
+        spaceBetween: 16,
+      },
+      1024: {
+        slidesPerView: 3, 
+        simulateTouch: false,  
+        touchMoveStopPropagation: false,
+      },
+    },
+  });
+  const projects = new Swiper('.projects .swiper', {
     rtl: dirAr, 
     initialSlide: 1,
     slidesPerView: 3, 
