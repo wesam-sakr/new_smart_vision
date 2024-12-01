@@ -1057,10 +1057,10 @@ footer .sub-footer .social-icons i:hover {
    -o-transform: translateY(-8px);
 }
 
-@media(min-width: 992px){
-   .span-2{
-      columns: 2;
-   }
+/* @media(min-width: 767.8px){
+} */
+.span-2{
+   columns: 2;
 }
 @media(max-width: 992px) {
    .container-fluid {
