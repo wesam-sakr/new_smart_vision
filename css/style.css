@@ -665,6 +665,10 @@ nav.navbar {
    font-size: 15px;
    margin-bottom: 1rem;
 }
+/* single */
+.servise-image{
+   aspect-ratio: 7 / 5;
+}
 
 .service-card:hover {
    transform: translate(8px, -10px);
