@@ -70,7 +70,7 @@ img {
    object-fit: cover;
 }
 
-stroke {
+.stroke-text {
    display: block;
    -webkit-text-stroke: 1px var(--stroke);
    color: transparent;
@@ -144,6 +144,10 @@ stroke {
 .link {
    position: absolute;
    inset: 0;
+}
+
+.span-2{
+   columns: 2;
 }
 
 /* .overlay {position: absolute;inset: 0;background-color: rgba(0, 0, 0, 0.62);z-index: 3;} */
@@ -953,7 +957,7 @@ nav.navbar {
    position: relative;
 }
 
-.subscribe stroke {
+.subscribe .stroke-text {
    -webkit-text-stroke: .31px var(--white);
 }
 
@@ -1057,11 +1061,6 @@ footer .sub-footer .social-icons i:hover {
    -o-transform: translateY(-8px);
 }
 
-/* @media(min-width: 767.8px){
-} */
-.span-2{
-   columns: 2;
-}
 @media(max-width: 992px) {
    .container-fluid {
       --bs-gutter-x: 1.5rem;
