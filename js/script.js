@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('scrollUp').style.display = window.scrollY > 300 ? 'block' : 'none';
   });
 
+  const paragraph = document.querySelector(".logo-img span");
+  if (paragraph) {
+    const words = paragraph.innerText.split(" ");
+    words[1] = `<span class="secondary">${words[1]}</span>`;
+    paragraph.innerHTML = words.join(" ");
+  }
+
   // sliders
   const pricing = new Swiper('.pricing .swiper', {
     rtl: dirAr, 
