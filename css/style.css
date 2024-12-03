@@ -942,6 +942,22 @@ nav.navbar {
    height: 100%;
 }
 
+/* about page */
+
+.about .story-col:nth-child(even){
+   direction: ltr;
+ }
+ .about .story-col:nth-child(even) .content {
+   direction: rtl;
+ }
+ 
+ [dir=ltr]  .about .story-col:nth-child(even) {
+   direction: rtl;
+ }
+ [dir=ltr]  .about .story-col:nth-child(even) .content{
+   direction: ltr;
+ }
+
 /* ---- footer ---- */
 .ready-to-work {
    background: url('../images/ready.png');
