@@ -379,7 +379,6 @@ nav.navbar {
 .navbar-light .navbar-brand img {
    width: 170px;
    object-fit: contain;
-   overflow: initial;
    margin: .5rem 0;
 }
 
