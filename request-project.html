@@ -241,13 +241,15 @@
               <h3 class="fs-5 mb-4 text-center fw-bold">
                 لديك فكرة لمشروع؟ قدم طلبك وسنساعدك في تحقيقها
               </h3>
-              <form action="">
+              <form action="/submit-request" method="POST">
                 <div class="row g-3">
                   <div class="col-md-6">
                     <input
                       type="text"
                       class="form-control"
                       placeholder="الاسم"
+                      name="name"
+                      required
                     >
                   </div>
                   <div class="col-md-6">
@@ -255,6 +257,8 @@
                       type="email"
                       class="form-control"
                       placeholder="البريد الإلكتروني"
+                      name="email"
+                      required
                     >
                   </div>
                   <div class="col-md-6">
@@ -262,6 +266,8 @@
                       type="text"
                       class="form-control"
                       placeholder="رقم الهاتف"
+                      name="phone"
+                      required
                     >
                   </div>
                   <div class="col-md-6">
@@ -269,18 +275,20 @@
                       type="text"
                       class="form-control"
                       placeholder="اسم الشركة"
+                      name="company"
                     >
                   </div>
                   <div class="col-12">
                     <select
                       class="form-control form-select"
-                      placeholder="نوع المشروع"
+                      name="project_type"
+                      required
                     >
-                    <option value="" hidden>نوع المشروع</option>
-                    <option value="">موقع الكتروني</option>
-                    <option value="">موقع الكتروني</option>
-                    <option value="">موقع الكتروني</option>
-                    <option value="">موقع الكتروني</option>
+                      <option value="" hidden>نوع المشروع</option>
+                      <option value="website">موقع الكتروني</option>
+                      <option value="mobile_app">تطبيق جوال</option>
+                      <option value="system">نظام إدارة</option>
+                      <option value="other">أخرى</option>
                     </select>
                   </div>
                   <div class="col-12">
@@ -288,10 +296,11 @@
                       class="form-control"
                       placeholder="وصف المشروع"
                       rows="8"
+                      name="description"
                     ></textarea>
                   </div>
                   <div class="col-auto ms-auto">
-                    <button class="main-btn px-5">ارسال الطلب</button>
+                    <button type="submit" class="main-btn px-5">ارسال الطلب</button>
                   </div>
                 </div>
               </form>
@@ -300,6 +309,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- footer -->
     <footer class="bg-main">
