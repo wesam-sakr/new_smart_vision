@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Vision</title>
-    <link rel="icon" href="images/fav_icon.svg" >
+    <link rel="icon" href="images/fav_icon.svg" />
 
     <meta
       name="keywords"
       content="شركة تصميم مواقع إلكترونية, تصميم مواقع الإنترنت, تطوير المواقع الإلكترونية, تصميم مواقع متاجر إلكترونية, تطوير تطبيقات موبايل, تصميم مواقع احترافية, شركات برمجة المواقع, أفضل شركات تصميم المواقع, تصميم تطبيقات جوال, تصميم مواقع لشركات, حلول تصميم المواقع, تطوير واجهات المستخدم, تصميم مواقع وتسويق إلكتروني, برمجة تطبيقات الجوال, خدمات تطوير المواقع الإلكترونية, أفضل تصميم مواقع في الشرق الأوسط"
-    >
+    />
 
     <meta
       name="description"
       content="شركة سعودية رائدة في تصميم وتطوير المواقع الإلكترونية والتطبيقات، نقدم حلولاً مبتكرة ومتطورة لعملائنا في مجال تصميم مواقع الإنترنت، تطوير التطبيقات، وتصميم المتاجر الإلكترونية. خدماتنا تركز على توفير أفضل التجارب الرقمية التي تواكب آخر التطورات في عالم التكنولوجيا."
-    >
+    />
 
     <!-- Bootstrap  **== note: file needs to be changed according to the language ==**-->
-    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" >
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 
     <!-- icons  -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
-    >
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
       integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    >
+    />
 
     <!-- swiper slider -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" >
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -95,12 +95,12 @@
             class="layer1"
             src="images/Path_blue.svg"
             alt="Blue decorative shape"
-          >
+          />
           <img
             class="layer2"
             src="images/Path_green.svg"
             alt="Green decorative shape"
-          >
+          />
         </div>
       </div>
 
@@ -123,7 +123,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand m-0" href="index.html">
-            <img src="images/logo.svg" alt="Smart Vision logo" >
+            <img src="images/logo.svg" alt="Smart Vision logo" />
           </a>
           <div
             class="collapse navbar-collapse justify-content-between align-items-center"
@@ -223,7 +223,7 @@
                 <a href="index.html" aria-label="العودة للصفحة الرئيسية"
                   >الرئيسية</a
                 >
-                <img src="images/breadcrumb-arrow.svg" alt="arrow shape" >
+                <img src="images/breadcrumb-arrow.svg" alt="arrow shape" />
                 تواصل معنا
               </div>
             </div>
@@ -232,7 +232,7 @@
       </section>
     </header>
 
-    <!-- services -->
+    <!-- contact us -->
     <section class="contact-us bg-main py-5">
       <div class="container-fluid">
         <div class="row gy-5 justify-content-between align-items-center pb-5">
@@ -300,9 +300,9 @@
                   <i class="bi bi-geo-alt"></i>
                   <span>
                     <span> الكويت - حولى </span>
-                    <br >
+                    <br />
                     <span> مصر - المنصورة </span>
-                    <br >
+                    <br />
                     <span> السعودية - جدة </span>
                   </span>
                 </a>
@@ -310,7 +310,7 @@
             </ul>
           </div>
           <div class="col-md-6">
-            <img src="images/contact-img.png" alt="" >
+            <img src="images/contact-img.png" alt="" />
           </div>
         </div>
         <div class="row gy-4 my-md-5">
@@ -319,46 +319,144 @@
               <h3 class="fs-5 mb-4">
                 عندك استفسار؟ اترك سؤالك وسنكون سعداء بالإجابة
               </h3>
-              <form action="">
+              <form id="contactForm" novalidate>
                 <div class="row g-3">
                   <div class="col-md-6">
                     <input
                       type="text"
                       class="form-control"
                       placeholder="الاسم"
-                    >
+                      id="name"
+                      required
+                    />
+                    <span class="text-danger small" id="nameError"></span>
                   </div>
                   <div class="col-md-6">
                     <input
                       type="email"
                       class="form-control"
                       placeholder="البريد الإلكتروني"
-                    >
+                      id="email"
+                      required
+                    />
+                    <span class="text-danger small" id="emailError"></span>
                   </div>
                   <div class="col-12">
                     <textarea
                       class="form-control"
                       placeholder="رسالتك"
                       rows="8"
+                      id="message"
+                      required
                     ></textarea>
+                    <span class="text-danger small" id="messageError"></span>
                   </div>
                   <div class="col-auto ms-auto">
-                    <button class="main-btn px-5">إرسال</button>
+                    <button type="submit" class="main-btn px-5">إرسال</button>
                   </div>
                 </div>
               </form>
+              <!-- if validation needed -->
+              <script>
+                document
+                  .getElementById("contactForm")
+                  .addEventListener("submit", function (e) {
+                    e.preventDefault(); // منع الإرسال الافتراضي
+
+                    // الحصول على القيم
+                    const name = document.getElementById("name").value.trim();
+                    const email = document.getElementById("email").value.trim();
+                    const message = document
+                      .getElementById("message")
+                      .value.trim();
+
+                    // الحصول على عناصر الرسائل
+                    const nameError = document.getElementById("nameError");
+                    const emailError = document.getElementById("emailError");
+                    const messageError =
+                      document.getElementById("messageError");
+
+                    // إعادة تعيين الرسائل
+                    nameError.textContent = "";
+                    emailError.textContent = "";
+                    messageError.textContent = "";
+
+                    let hasError = false;
+
+                    // التحقق من الحقول
+                    if (!name) {
+                      nameError.textContent = "يرجى إدخال اسمك.";
+                      hasError = true;
+                    }
+
+                    if (!email || !validateEmail(email)) {
+                      emailError.textContent = "يرجى إدخال بريد إلكتروني صحيح.";
+                      hasError = true;
+                    }
+
+                    if (!message) {
+                      messageError.textContent = "يرجى إدخال رسالتك.";
+                      hasError = true;
+                    }
+
+                    // إذا لم تكن هناك أخطاء
+                    if (!hasError) {
+                      // إنشاء Toast برمجيًا
+                      const toast = document.createElement("div");
+                      toast.className =
+                        "toast align-items-center text-bg-success border-0";
+                      toast.role = "alert";
+                      toast.ariaLive = "assertive";
+                      toast.ariaAtomic = "true";
+                      toast.style =
+                        "position: fixed; bottom: 1rem; right: 1rem; z-index: 1055;";
+
+                      toast.innerHTML = `
+                        <div class="d-flex">
+                          <div class="toast-body">تم إرسال النموذج بنجاح!</div>
+                          <button
+                            type="button"
+                            class="btn-close btn-close-white me-2 m-auto"
+                            data-bs-dismiss="toast"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                      `;
+
+                      // إضافة العنصر إلى الصفحة
+                      document.body.appendChild(toast);
+
+                      // إظهار التوست باستخدام Bootstrap
+                      const bootstrapToast = new bootstrap.Toast(toast);
+                      bootstrapToast.show();
+
+                      // إزالة العنصر بعد انتهاء العرض
+                      toast.addEventListener("hidden.bs.toast", () => {
+                        toast.remove();
+                      });
+
+                      // إعادة تعيين النموذج
+                      this.reset();
+                    }
+                  });
+
+                // دالة للتحقق من صحة البريد الإلكتروني
+                function validateEmail(email) {
+                  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                  return re.test(email);
+                }
+              </script>
             </div>
           </div>
           <div class="col-md-5">
             <div id="map" class="h-100">
-                <iframe
+              <iframe
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=%D8%B3%D9%85%D8%A7%D8%B1%D8%AA%20%D9%81%D9%8A%D8%AC%D9%86%20%D9%84%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%88%D8%A8%D8%B1%D9%85%D8%AC%D8%A9%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%82%D8%B9%20%D9%88%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AC%D8%B1%20%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9&t=k&z=17&ie=UTF8&iwloc=&output=embed"
-                frameborder="0"
-                scrolling="no"
-                marginheight="0"
-                marginwidth="0"
-                ></iframe>
+                title="خريطة تظهر موقع سمارت فيجن لتصميم وبرمجة المواقع والتطبيقات"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
@@ -367,261 +465,263 @@
 
     <!-- footer -->
     <footer class="bg-main">
-        <!-- جاهز للعمل معنا؟ -->
-        <div class="ready-to-work position-relative py-4 py-md-5 mb-5">
-          <div class="overlay d-md-none"></div>
-          <div class="container-fluid position-relative z-1 text-center text-md-start py-3">
-            <div
-              class="title text-center col-6 col-md-3 col-lg-2 m-auto m-md-0"
-              aria-labelledby="ready-to-work-heading"
-            >
-              <p class="secName">لنتعاون</p>
-              <h2 class="secTitle my-md-4" id="ready-to-work-heading">
-                جـــــــــــــاهـــــز للعمل معنا؟
-              </h2>
-            </div>
-            <a
-              href="https://api.whatsapp.com/send?phone=966920005381&text=جاهز%20للعمل%20معنا%20جلسة%20مجانية"
-              target="_blank"
-              aria-label="تواصل معنا عبر الواتساب للحصول على جلسة مجانية"
-              class="main-btn col-6 col-md-3 col-lg-2"
-            >
-              جلسة مجانية
-            </a>
+      <!-- جاهز للعمل معنا؟ -->
+      <div class="ready-to-work position-relative py-4 py-md-5 mb-5">
+        <div class="overlay d-md-none"></div>
+        <div
+          class="container-fluid position-relative z-1 text-center text-md-start py-3"
+        >
+          <div
+            class="title text-center col-6 col-md-3 col-lg-2 m-auto m-md-0"
+            aria-labelledby="ready-to-work-heading"
+          >
+            <p class="secName">لنتعاون</p>
+            <h2 class="secTitle my-md-4" id="ready-to-work-heading">
+              جـــــــــــــاهـــــز للعمل معنا؟
+            </h2>
           </div>
+          <a
+            href="https://api.whatsapp.com/send?phone=966920005381&text=جاهز%20للعمل%20معنا%20جلسة%20مجانية"
+            target="_blank"
+            aria-label="تواصل معنا عبر الواتساب للحصول على جلسة مجانية"
+            class="main-btn col-6 col-md-3 col-lg-2"
+          >
+            جلسة مجانية
+          </a>
         </div>
-  
-        <!-- الاشتراك في النشرة البريدية -->
-        <div class="subscribe-wrraper">
-          <div class="container-fluid">
-            <div class="subscribe text-center text-md-start py-5 px-4 p-lg-5">
-              <div class="row gy-3 align-items-center">
-                <div class="col-md-5">
-                  <h2 class="fs-5 secondary mb-3">تواصل معنا</h2>
-                  <h3 class="lh-lg lh-lg-base">
-                    اشترك معنا في
-                    <span class="stroke-text"> نشرتنا الإخبارية </span>
-                  </h3>
-                </div>
-                <div class="col-md-7">
-                  <form>
-                    <div class="newsLetterForm">
-                      <div class="form-group p-2 bg-main d-flex">
-                        <input
-                          type="email"
-                          required
-                          class="form-control"
-                          name="subscribe_email"
-                          placeholder="البريد الإلكتروني"
-                          aria-label="أدخل البريد الإلكتروني للاشتراك في النشرة البريدية"
-                        >
-                        <button
-                          type="submit"
-                          class="main-btn send-subscribtion"
-                          aria-label="إرسال الاشتراك"
-                        >
-                          ارسال
-                        </button>
-                      </div>
+      </div>
+
+      <!-- الاشتراك في النشرة البريدية -->
+      <div class="subscribe-wrraper">
+        <div class="container-fluid">
+          <div class="subscribe text-center text-md-start py-5 px-4 p-lg-5">
+            <div class="row gy-3 align-items-center">
+              <div class="col-md-5">
+                <h2 class="fs-5 secondary mb-3">تواصل معنا</h2>
+                <h3 class="lh-lg lh-lg-base">
+                  اشترك معنا في
+                  <span class="stroke-text"> نشرتنا الإخبارية </span>
+                </h3>
+              </div>
+              <div class="col-md-7">
+                <form>
+                  <div class="newsLetterForm">
+                    <div class="form-group p-2 bg-main d-flex">
+                      <input
+                        type="email"
+                        required
+                        class="form-control"
+                        name="subscribe_email"
+                        placeholder="البريد الإلكتروني"
+                        aria-label="أدخل البريد الإلكتروني للاشتراك في النشرة البريدية"
+                      />
+                      <button
+                        type="submit"
+                        class="main-btn send-subscribtion"
+                        aria-label="إرسال الاشتراك"
+                      >
+                        ارسال
+                      </button>
                     </div>
-                  </form>
-                </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
-  
-        <!-- القسم العلوي من الفوتر -->
-        <div class="main-footer">
-          <div class="container-fluid">
-            <div class="row gy-4 justify-content-between">
-              <!-- شعار الشركة ومعلومات عامة -->
-              <div class="col-lg-3">
-                <div class="logo">
-                  <a href="index.html" aria-label="Go to home page">
-                    <img
-                      class="footer-brand"
-                      src="images/logo.svg"
-                      alt="Smart Vision logo"
-                    >
-                  </a>
-                  <p class="my-3">
-                    لقد كانت المهمة سهلة. تركز الدراسة على تحليل وتطوير الحلول
-                    التقنية، ونتطلع دائماً لتقديم أفضل الحلول الإبداعية
-                  </p>
-                  <div class="approved d-flex align-items-center gap-3">
-                    <img src="images/approved-1.png" alt="موثق من معروف" >
-                    <img src="images/approved-2.png" alt="موثق من موثوق" >
-                  </div>
+      </div>
+
+      <!-- القسم العلوي من الفوتر -->
+      <div class="main-footer">
+        <div class="container-fluid">
+          <div class="row gy-4 justify-content-between">
+            <!-- شعار الشركة ومعلومات عامة -->
+            <div class="col-lg-3">
+              <div class="logo">
+                <a href="index.html" aria-label="Go to home page">
+                  <img
+                    class="footer-brand"
+                    src="images/logo.svg"
+                    alt="Smart Vision logo"
+                  />
+                </a>
+                <p class="my-3">
+                  لقد كانت المهمة سهلة. تركز الدراسة على تحليل وتطوير الحلول
+                  التقنية، ونتطلع دائماً لتقديم أفضل الحلول الإبداعية
+                </p>
+                <div class="approved d-flex align-items-center gap-3">
+                  <img src="images/approved-1.png" alt="موثق من معروف" />
+                  <img src="images/approved-2.png" alt="موثق من موثوق" />
                 </div>
               </div>
-  
-              <div class="col-6 col-md-4 col-lg-auto">
-                <h4 class="footer-heading footer-pages-title">صفحات الموقع</h4>
-                <nav aria-label="Site Pages">
-                  <ul>
-                    <li>
-                      <a href="index.html" aria-label="Go to home page"
-                        >الرئيسية</a
-                      >
-                    </li>
-                    <li>
-                      <a href="about.html" aria-label="Learn more about us"
-                        >من نحن</a
-                      >
-                    </li>
-                    <li>
-                      <a href="services.html" aria-label="Explore our services"
-                        >الخدمات</a
-                      >
-                    </li>
-                    <li>
-                      <a href="projects.html" aria-label="View our projects"
-                        >أعمالنا</a
-                      >
-                    </li>
-                    <li>
-                      <a href="blogs.html" aria-label="Read our latest blogs"
-                        >المدونة</a
-                      >
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-  
-              <div class="col-6 col-md-4 col-lg-auto">
-                <h4 class="footer-heading footer-links-title">روابط سريعة</h4>
-                <nav aria-label="Quick Links">
-                  <ul>
-                    <li>
-                      <a href="#">منطقة العميل</a>
-                    </li>
-                    <li>
-                      <a href="policy.html" aria-label="View privacy policy"
-                        >سياسة الخصوصية</a
-                      >
-                    </li>
-                    <li>
-                      <a href="terms.html" aria-label="View terms and conditions"
-                        >الشروط والأحكام</a
-                      >
-                    </li>
-                    <li>
-                      <a href="contact.html" aria-label="Contact us for inquiries"
-                        >تواصل معنا</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="request-project.html"
-                        aria-label="Request your project"
-                        >اطلب مشروعك</a
-                      >
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-  
-              <div class="col-12 col-md-4 col-lg-auto">
-                <div class="d-flex gap-3 d-md-block">
-                  <div>
-                    <h4 class="footer-heading footer-contact-title">
-                      تواصل معنا
-                    </h4>
-                    <nav aria-label="Contact Information">
-                      <ul>
-                        <li>
-                          <a
-                            href="tel:+966568023169"
-                            aria-label="Call us at +966 568 023 169"
-                          >
-                            <i class="bi bi-telephone-outbound"></i>
-                            +966 568 023 169
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="mailto:hr@smartvision4p.com"
-                            aria-label="Send an email to hr@smartvision4p.com"
-                          >
-                            <i class="bi bi-envelope"></i>
-                            hr@smartvision4p.com
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://maps.app.goo.gl/gYXX71hN1mcMc8Lm6"
-                            aria-label="View our location"
-                          >
-                            <i class="bi bi-geo-alt"></i>
-                            المنصورة
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                  <div>
-                    <h5 class="footer-heading my-md-3">متوفرين أيضًا على</h5>
-                    <ul class="apps-icons mt-3 d-flex gap-3">
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-auto">
+              <h4 class="footer-heading footer-pages-title">صفحات الموقع</h4>
+              <nav aria-label="Site Pages">
+                <ul>
+                  <li>
+                    <a href="index.html" aria-label="Go to home page"
+                      >الرئيسية</a
+                    >
+                  </li>
+                  <li>
+                    <a href="about.html" aria-label="Learn more about us"
+                      >من نحن</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html" aria-label="Explore our services"
+                      >الخدمات</a
+                    >
+                  </li>
+                  <li>
+                    <a href="projects.html" aria-label="View our projects"
+                      >أعمالنا</a
+                    >
+                  </li>
+                  <li>
+                    <a href="blogs.html" aria-label="Read our latest blogs"
+                      >المدونة</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-auto">
+              <h4 class="footer-heading footer-links-title">روابط سريعة</h4>
+              <nav aria-label="Quick Links">
+                <ul>
+                  <li>
+                    <a href="#">منطقة العميل</a>
+                  </li>
+                  <li>
+                    <a href="policy.html" aria-label="View privacy policy"
+                      >سياسة الخصوصية</a
+                    >
+                  </li>
+                  <li>
+                    <a href="terms.html" aria-label="View terms and conditions"
+                      >الشروط والأحكام</a
+                    >
+                  </li>
+                  <li>
+                    <a href="contact.html" aria-label="Contact us for inquiries"
+                      >تواصل معنا</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="request-project.html"
+                      aria-label="Request your project"
+                      >اطلب مشروعك</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-auto">
+              <div class="d-flex gap-3 d-md-block">
+                <div>
+                  <h4 class="footer-heading footer-contact-title">
+                    تواصل معنا
+                  </h4>
+                  <nav aria-label="Contact Information">
+                    <ul>
                       <li>
                         <a
-                          href="https://play.google.com/store/apps/dev?id=8697678374869740936"
-                          aria-label="Google Play"
+                          href="tel:+966568023169"
+                          aria-label="Call us at +966 568 023 169"
                         >
-                          <i class="fa-brands fa-google-play"></i>
+                          <i class="bi bi-telephone-outbound"></i>
+                          +966 568 023 169
                         </a>
                       </li>
                       <li>
-                        <a href="#" aria-label="Apple Store">
-                          <i class="fa-brands fa-apple"></i>
+                        <a
+                          href="mailto:hr@smartvision4p.com"
+                          aria-label="Send an email to hr@smartvision4p.com"
+                        >
+                          <i class="bi bi-envelope"></i>
+                          hr@smartvision4p.com
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://maps.app.goo.gl/gYXX71hN1mcMc8Lm6"
+                          aria-label="View our location"
+                        >
+                          <i class="bi bi-geo-alt"></i>
+                          المنصورة
                         </a>
                       </li>
                     </ul>
-                  </div>
+                  </nav>
+                </div>
+                <div>
+                  <h5 class="footer-heading my-md-3">متوفرين أيضًا على</h5>
+                  <ul class="apps-icons mt-3 d-flex gap-3">
+                    <li>
+                      <a
+                        href="https://play.google.com/store/apps/dev?id=8697678374869740936"
+                        aria-label="Google Play"
+                      >
+                        <i class="fa-brands fa-google-play"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Apple Store">
+                        <i class="fa-brands fa-apple"></i>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-  
-        <!-- القسم السفلي من الفوتر -->
-        <div class="sub-footer py-3">
-          <div
-            class="container-fluid d-flex flex-column-reverse flex-md-row gap-3 align-items-center justify-content-center justify-content-md-between"
-          >
-            <div class="payment-images">
-              <img
-                src="images/footer-card.svg"
-                alt="Available payment methods include PayPal, Mada, Mastercard, Visa, Apple Pay, and bank transfer"
-              >
-            </div>
-            <nav aria-label="Social Media Links">
-              <ul class="social-icons">
-                <li>
-                  <a href="#" aria-label="Visit our Facebook page">
-                    <i class="fa-brands fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" aria-label="Visit our Instagram page">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" aria-label="Visit our LinkedIn page">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" aria-label="Visit our Twitter page">
-                    <i class="fa-brands fa-x-twitter"></i>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+      </div>
+
+      <!-- القسم السفلي من الفوتر -->
+      <div class="sub-footer py-3">
+        <div
+          class="container-fluid d-flex flex-column-reverse flex-md-row gap-3 align-items-center justify-content-center justify-content-md-between"
+        >
+          <div class="payment-images">
+            <img
+              src="images/footer-card.svg"
+              alt="Available payment methods include PayPal, Mada, Mastercard, Visa, Apple Pay, and bank transfer"
+            />
           </div>
+          <nav aria-label="Social Media Links">
+            <ul class="social-icons">
+              <li>
+                <a href="#" aria-label="Visit our Facebook page">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Visit our Instagram page">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Visit our LinkedIn page">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Visit our Twitter page">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </footer>
+      </div>
+    </footer>
 
     <!-- bootstrap script -->
     <script src="js/bootstrap.bundle.min.js"></script>
