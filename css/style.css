@@ -1528,6 +1528,9 @@ nav.navbar {
    .heroSec {
       padding-bottom: 5rem;
    }
+   .top-nav .bottom-shape [class*=layer] {
+      height: 60px;
+   }
 }
 @media (min-width:767.8px) {
    .project-steps .related li{
