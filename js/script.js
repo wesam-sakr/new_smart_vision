@@ -1,7 +1,3 @@
-// $('.owl-carousel').addClass('owl-rtl')
-// $('html').attr('dir', 'rtl');
-// $('html').attr('lang', 'ar');
-// $('link[href="css/bootstrap.min.css"]').attr('href', 'css/bootstrap.rtl.min.css');
 document.addEventListener('DOMContentLoaded', () => {
   // Determine text direction
   const bodyDir = window.getComputedStyle(document.body).direction;
