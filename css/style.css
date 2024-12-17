@@ -93,26 +93,34 @@ img {
 }
 .scrollUp {
    position: fixed;
-   bottom: 35px;
+   bottom: 130px;
    inset-inline-start: 30px;
    z-index: 9;
 }
 .scrollUp.whatsapp{
-   inset-inline-start: calc(100% - 70px);
+   bottom: 60px;
+}
+.whatsapp i::after {
+   height: 54px !important;
+   width: 54px !important;
+   top: calc(50% - 27px) !important;
+   inset-inline-start: calc(50% - 27px) !important;
 }
 .scrollUp a i {
+   position: relative;
    display: flex;
    align-items: center;
    justify-content: center;
-   color: var(--main);
-   background: #fff;
+   color: var(--white);
+   background: #0312276b;
+   backdrop-filter: blur(18px);
    border-radius: 50%;
    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 30%);
    transition: .5s;
    z-index: 8708;
    font-size: 20px;
-   width: 40px;
-   height: 40px;
+   width: 54px;
+   height: 54px;
 }
 .scrollUp.whatsapp a i {
    background: var(--secondary);
@@ -339,12 +347,13 @@ img {
    border-radius: 50%;
    position: absolute;
 }
+.whatsapp i::after,
 .dots-shape::before {
    content: '';
+   height: 22px;
    width: 22px;
    top: calc(50% - 11px);
    inset-inline-start: calc(50% - 11px);
-   height: 22px;
    position: absolute;
    border: 3px solid #32f8bd9e;
    border-radius: 100%;
@@ -1306,6 +1315,7 @@ nav.navbar {
    transform: translateY(-50%);
    inset-inline-start: calc(25% - 16px);
 }
+.whatsapp i::after,
 .about .why:hover .dots-shape:before,
 .history li:hover span:before {
    -webkit-animation-duration: 1.5s;

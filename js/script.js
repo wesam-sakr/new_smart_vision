@@ -100,8 +100,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function equalizeSlideHeights() {
+    const slides = document.querySelectorAll('.swiper-slide');
+    let maxHeight = 0;
+  
+    // حساب أطول عنصر
+    slides.forEach(slide => {
+      const pricingCard = slide.querySelector('.pricing-card');
+      if (pricingCard) { // التحقق من وجود العنصر
+        const contentHeight = pricingCard.offsetHeight;
+        if (contentHeight > maxHeight) {
+          maxHeight = contentHeight;
+        }
+      }
+    });
+  
+    // تطبيق الطول على جميع العناصر
+    slides.forEach(slide => {
+      const pricingCard = slide.querySelector('.pricing-card');
+      if (pricingCard) { // التحقق من وجود العنصر
+        pricingCard.style.height = `${maxHeight}px`;
+      }
+    });
+  }
+  
+
   // sliders
   const swiper = new Swiper('.swiper', {
+    on: {
+      init: equalizeSlideHeights,
+      slideChange: equalizeSlideHeights,
+    },
     rtl: dirAr,
     initialSlide: 1,
     slidesPerView: 3,
@@ -124,5 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+
 
 });
