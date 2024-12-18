@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slides.forEach(slide => {
       const pricingCard = slide.querySelector('.pricing-card');
       if (pricingCard) { // التحقق من وجود العنصر
-        pricingCard.style.height = `${maxHeight}px`;
+        pricingCard.style.minHeight = `${maxHeight}px`;
       }
     });
   }

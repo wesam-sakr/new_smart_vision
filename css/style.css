@@ -1232,7 +1232,7 @@ nav.navbar {
    align-items: center;
 }
 .blogs .blog-card.single h3::before {
-   content: url(../images/arrow.svg);
+   content: url('../images/arrow.svg');
    display: inline-flex;
    margin-top: 3px;
    transform: scale(0.6);
@@ -1290,7 +1290,7 @@ nav.navbar {
    margin-inline-end: 10px;
 }
 .about .who-images>img {
-   aspect-ratio: 10/7;
+   aspect-ratio: 9/7;
 }
 .about .float-img {
    width: 48%;
@@ -1435,6 +1435,9 @@ nav.navbar {
    background-repeat: no-repeat;
    background-size: cover;
    padding: 4rem 0;
+}
+[dir='ltr'] .ready-to-work {
+   background: url('../images/ready-ltr.png');
 }
 /* subscribe */
 .subscribe {
