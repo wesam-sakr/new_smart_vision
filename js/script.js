@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // تغيير اتجاه النص واللغة
-  document.documentElement.setAttribute('dir', 'ltr');
-  document.documentElement.setAttribute('lang', 'en');
+  // document.documentElement.setAttribute('dir', 'ltr');
+  // document.documentElement.setAttribute('lang', 'en');
 
   // تغيير رابط ملف CSS
-  const bootstrapLink = document.querySelector('link[href="css/bootstrap.rtl.min.css"]');
-  if (bootstrapLink) bootstrapLink.setAttribute('href', 'css/bootstrap.min.css');
+  // const bootstrapLink = document.querySelector('link[href="css/bootstrap.rtl.min.css"]');
+  // if (bootstrapLink) bootstrapLink.setAttribute('href', 'css/bootstrap.min.css');
 
 
   // Determine text direction
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // sliders
   const swiper = new Swiper(".swiper", {
-    // on: { init: n, slideChange: n }, 
+    on: { init: equalizeSlideHeights, slideChange: equalizeSlideHeights }, 
     rtl: dirAr, 
     loop: true, 
     initialSlide: 1, 
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     breakpoints: { 
       320: { 
         slidesPerView: 1, 
-        centeredSlides: !0, 
+        // centeredSlides: !0, 
         spaceBetween: 16 ,
         autoplay: {
           delay: 2500,
@@ -154,8 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, 
       768: { 
-        slidesPerView: 2, 
-        centeredSlides: !0, 
+        slidesPerView: 2.1, 
+        // centeredSlides: !0, 
         spaceBetween: 16 
       }, 
       1024: { 

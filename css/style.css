@@ -59,6 +59,7 @@ p {
 }
 img {
    max-width: 100%;
+   height: 100%;
    object-fit: cover;
 }
 .stroke-text {
@@ -712,6 +713,7 @@ nav.navbar {
 }
 .heroSec [class*='hero-layer'] {
    position: absolute;
+   height: auto;
    bottom: 0;
    z-index: -1;
 }
@@ -746,6 +748,7 @@ nav.navbar {
 .service-card .service-icon svg {
    width: 100%;
 }
+.service .server-icon::before,
 .service-card .service-icon::before {
    content: '';
    position: absolute;
@@ -822,6 +825,24 @@ nav.navbar {
 .service .feature-list li {
    font-size: 16px;
 }
+.service .server-feature:not(:first-child)::before,
+.service .server-feature:not(:last-child)::after {
+   content: "";
+   height: 1px;
+   width: calc(50% - 46px);
+   background-color:#32f8bd38;
+   position: absolute;
+   inset-inline-start: 0px;
+   top: 20px;
+   z-index: 1;
+}
+.service .server-feature:not(:last-child)::after {
+   inset-inline-start: calc(50% + 46px);
+}
+.service .server-icon{
+   width: 60px;
+   padding: 0 10px;
+}
 [dir='ltr'] [class*=-card] .more .arrow-more{
    transform: rotate(225deg);
    -webkit-transform: rotate(225deg);
@@ -853,6 +874,8 @@ nav.navbar {
 }
 .pricing .pricing-card {
    background-color: #051E32 !important;
+   display: flex;
+   flex-direction: column;
 }
 .pricing .pricing-card.inner-shadow {
    box-shadow: inset 0px 0px 32px #32F8BD9E;
@@ -1551,6 +1574,11 @@ nav.navbar {
    .history ul li:nth-child(even) span::after {
       inset-inline-start: calc(-100% - 25px);
    }
+   .service .server-feature:nth-child(3)::before,
+   .service .server-feature:nth-child(2)::after{
+      content: unset;
+   }
+
 }
 @media(max-width: 992px) and (min-width:767.8px) {
    .heroSec {
