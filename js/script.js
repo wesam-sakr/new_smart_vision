@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  // تغيير اتجاه النص واللغة
+  document.documentElement.setAttribute('dir', 'ltr');
+  document.documentElement.setAttribute('lang', 'en');
+
+  // تغيير رابط ملف CSS
+  const bootstrapLink = document.querySelector('link[href="css/bootstrap.rtl.min.css"]');
+  if (bootstrapLink) bootstrapLink.setAttribute('href', 'css/bootstrap.min.css');
+
+
   // Determine text direction
   const bodyDir = window.getComputedStyle(document.body).direction;
   const dirAr = bodyDir === "rtl";
@@ -25,39 +35,39 @@ document.addEventListener('DOMContentLoaded', () => {
   if (select) {
     document.querySelectorAll("select").forEach(function (select) {
       const numberOfOptions = select.options.length;
-    
+
       // إخفاء الـ <select> الأصلي
       select.classList.add("select-hidden");
-    
+
       // إنشاء الهيكل الخاص بـ select-styled
       const wrapper = document.createElement("div");
       wrapper.classList.add("select");
       select.parentNode.insertBefore(wrapper, select);
       wrapper.appendChild(select);
-    
+
       const styledSelect = document.createElement("div");
       styledSelect.classList.add("select-styled");
       styledSelect.textContent = select.options[0].textContent;
       wrapper.appendChild(styledSelect);
-    
+
       const optionsList = document.createElement("ul");
       optionsList.classList.add("select-options");
       wrapper.appendChild(optionsList);
-    
+
       // إضافة الخيارات إلى القائمة المخصصة
       Array.from(select.options).forEach((option, index) => {
         const listItem = document.createElement("li");
         listItem.textContent = option.textContent;
         listItem.setAttribute("rel", option.value);
         optionsList.appendChild(listItem);
-    
+
         if (option.selected) {
           listItem.classList.add("is-selected");
         }
       });
-    
+
       const listItems = optionsList.querySelectorAll("li");
-    
+
       // عند الضغط على العنصر المخصص
       styledSelect.addEventListener("click", function (e) {
         e.stopPropagation();
@@ -67,31 +77,31 @@ document.addEventListener('DOMContentLoaded', () => {
             activeStyledSelect.nextElementSibling.style.display = "none";
           }
         });
-    
+
         styledSelect.classList.toggle("active");
         optionsList.style.display = styledSelect.classList.contains("active") ? "block" : "none";
       });
-    
+
       // عند اختيار عنصر من القائمة
       listItems.forEach(function (listItem) {
         listItem.addEventListener("click", function (e) {
           e.stopPropagation();
           styledSelect.textContent = listItem.textContent;
           styledSelect.classList.remove("active");
-    
+
           select.value = listItem.getAttribute("rel");
-    
+
           optionsList.querySelectorAll("li.is-selected").forEach(function (selectedItem) {
             selectedItem.classList.remove("is-selected");
           });
           listItem.classList.add("is-selected");
-    
+
           optionsList.style.display = "none";
-    
+
           // يمكنك إضافة أي شيء هنا مثل: console.log(select.value);
         });
       });
-    
+
       // عند الضغط خارج العنصر
       document.addEventListener("click", function () {
         styledSelect.classList.remove("active");
@@ -103,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function equalizeSlideHeights() {
     const slides = document.querySelectorAll('.swiper-slide');
     let maxHeight = 0;
-  
+
     // حساب أطول عنصر
     slides.forEach(slide => {
       const pricingCard = slide.querySelector('.pricing-card');
@@ -114,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
-  
+
     // تطبيق الطول على جميع العناصر
     slides.forEach(slide => {
       const pricingCard = slide.querySelector('.pricing-card');
@@ -123,36 +133,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  
+
 
   // sliders
-  const swiper = new Swiper('.swiper', {
-    on: {
-      init: equalizeSlideHeights,
-      slideChange: equalizeSlideHeights,
-    },
-    rtl: dirAr,
-    initialSlide: 1,
-    slidesPerView: 3,
-    spaceBetween: 32,
-    centeredSlides: true,
-
-    breakpoints: {
-      320: {
-        slidesPerView: 1.2,
-        spaceBetween: 16,
-      },
-      768: {
-        slidesPerView: 1.5,
-        spaceBetween: 16,
-      },
-      1024: {
-        slidesPerView: 3,
-        simulateTouch: false,
-        touchMoveStopPropagation: false,
-      },
-    },
-  });
-
-
+  const swiper = new Swiper(".swiper", {
+    // on: { init: n, slideChange: n }, 
+    rtl: dirAr, 
+    loop: true, 
+    initialSlide: 1, 
+    slidesPerView: 3, 
+    spaceBetween: 32, 
+    breakpoints: { 
+      320: { 
+        slidesPerView: 1, 
+        centeredSlides: !0, 
+        spaceBetween: 16 ,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        }
+      }, 
+      768: { 
+        slidesPerView: 2, 
+        centeredSlides: !0, 
+        spaceBetween: 16 
+      }, 
+      1024: { 
+        slidesPerView: 3, 
+        touchMoveStopPropagation: !1
+      }
+    } 
+  })
 });

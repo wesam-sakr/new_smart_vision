@@ -94,7 +94,7 @@ img {
 .scrollUp {
    position: fixed;
    bottom: 130px;
-   inset-inline-start: 30px;
+   inset-inline-end: 30px;
    z-index: 9;
 }
 .scrollUp.whatsapp{
@@ -362,7 +362,6 @@ img {
 }
 .social-icons {
    display: flex;
-   gap: 16px;
 }
 .apps-icons i,
 .social-icons i {
@@ -1438,6 +1437,7 @@ nav.navbar {
 }
 [dir='ltr'] .ready-to-work {
    background: url('../images/ready-ltr.png');
+   background-size: cover;
 }
 /* subscribe */
 .subscribe {
@@ -1504,6 +1504,9 @@ nav.navbar {
    color: var(--secondary);
 }
 /* sub footer */
+.sub-footer .social-icons {
+   gap: 6px;
+}
 .sub-footer .social-icons i {
    background: #E9EDF4;
 }
@@ -1621,7 +1624,18 @@ nav.navbar {
    .ready-to-work {
       background-position-x: 4%;
    }
+   [dir=ltr] .ready-to-work{
+      background-position-x: 96%;
+   }
    .project-details .project-imgs .img {
       grid-column: span 12 !important;
    }
+   .scrollUp {
+      bottom: 190px;
+      inset-inline-end: 1rem;
+   }
+   .scrollUp.whatsapp {
+      bottom: 120px;
+   }
+
 }
