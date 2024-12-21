@@ -428,7 +428,7 @@ img {
    }
 }
 
-header {
+.header-hero-wrapper{
    position: relative;
    overflow: hidden;
    width: 100%;
@@ -436,6 +436,8 @@ header {
    background: url('../images/hero_pattern.png');
    background-color: var(--main);
 }
+/* header {
+} */
 /* top nav */
 .top-nav .container-fluid {
    padding-block: 10px;

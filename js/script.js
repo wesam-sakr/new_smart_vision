@@ -1,14 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-  // تغيير اتجاه النص واللغة
-  // document.documentElement.setAttribute('dir', 'ltr');
-  // document.documentElement.setAttribute('lang', 'en');
-
-  // تغيير رابط ملف CSS
-  // const bootstrapLink = document.querySelector('link[href="css/bootstrap.rtl.min.css"]');
-  // if (bootstrapLink) bootstrapLink.setAttribute('href', 'css/bootstrap.min.css');
-
-
   // Determine text direction
   const bodyDir = window.getComputedStyle(document.body).direction;
   const dirAr = bodyDir === "rtl";
@@ -137,31 +127,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // sliders
   const swiper = new Swiper(".swiper", {
-    on: { init: equalizeSlideHeights, slideChange: equalizeSlideHeights }, 
-    rtl: dirAr, 
-    loop: true, 
-    initialSlide: 1, 
-    slidesPerView: 3, 
-    spaceBetween: 32, 
-    breakpoints: { 
-      320: { 
-        slidesPerView: 1, 
-        // centeredSlides: !0, 
-        spaceBetween: 16 ,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        }
-      }, 
-      768: { 
-        slidesPerView: 2.1, 
-        // centeredSlides: !0, 
-        spaceBetween: 16 
-      }, 
-      1024: { 
-        slidesPerView: 3, 
-        touchMoveStopPropagation: !1
-      }
-    } 
-  })
+    rtl: dirAr,
+    initialSlide: 1,
+    slidesPerView: 3,
+    spaceBetween: 32,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.15,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 2.15,
+        spaceBetween: 16,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        touchMoveStopPropagation: false,
+      },
+    },
+    on: {
+      init: equalizeSlideHeights,
+      slideChange: equalizeSlideHeights,
+    },
+  });
+  
 });
