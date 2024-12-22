@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // حساب أطول عنصر
     slides.forEach(slide => {
-      const pricingCard = slide.querySelector('.pricing-card');
+      const pricingCard = slide.querySelector('pricing-card');
       if (pricingCard) { // التحقق من وجود العنصر
         const contentHeight = pricingCard.offsetHeight;
         if (contentHeight > maxHeight) {
@@ -128,18 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // sliders
   const swiper = new Swiper(".swiper", {
     rtl: dirAr,
-    initialSlide: 1,
     slidesPerView: 3,
     spaceBetween: 32,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    loop: true,
     breakpoints: {
       320: {
+        initialSlide: 1,
         slidesPerView: 1.15,
         spaceBetween: 16,
+        loop: true,
       },
       768: {
         slidesPerView: 2.15,
