@@ -152,5 +152,24 @@ document.addEventListener('DOMContentLoaded', () => {
       slideChange: equalizeSlideHeights,
     },
   });
-  
+  const swiper2 = new Swiper(".swiper.ourteam", {
+    slidesPerView: 4,
+    spaceBetween: 12,
+    loop: true, // تفعيل التكرار
+    autoplay: {
+        delay: 3000, // تأخير بين الشرائح بالميلي ثانية (هنا 3 ثوانٍ)
+        disableOnInteraction: false, // استمر في التشغيل التلقائي حتى عند التفاعل
+    },
+    breakpoints: { // نقاط التوقف حسب حجم الشاشة
+        320: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2.2,
+        },
+        1024: {
+            slidesPerView: 4,
+        },
+    },
+  });
 });
